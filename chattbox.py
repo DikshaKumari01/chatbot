@@ -1,10 +1,8 @@
 import random
 import nltk
 from nltk.stem import PorterStemmer
-
 nltk.download("punkt")
 stemmer = PorterStemmer()
-
 data = {
     "greetings": ["hello", "hi", "hey", "howdy", "hola"],
     "responses": ["Hello!", "Hi there!", "Hey!", "Greetings!"],
@@ -24,7 +22,6 @@ def get_response(user_input):
 
     return "I'm sorry, I don't understand."
 
-
 # Chat loop
 def chat():
     print("Chatbot: Hello! I'm your friendly chatbot. Type 'exit' to end the conversation.")
@@ -37,7 +34,6 @@ def chat():
 
         response = get_response(user_input)
         print("Chatbot:", response)
-
 
 if __name__ == "__main__":
     chat()
